@@ -1,2 +1,6 @@
-# gsoc-2018-proposal-nvim-external-ui
-Proposal for GSoC 2018 for the Neovim organization.
+# GSoC 2018 Neovim Proposal
+
+To build:
+```
+$ pandoc src/*.md -o o.pdf
+```
