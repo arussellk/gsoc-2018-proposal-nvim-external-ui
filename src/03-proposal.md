@@ -35,6 +35,8 @@ Completion of this proposal will yield:
 2. Improvements to https://github.com/neovim/node-client where necessary
 3. Improvements to https://github.com/neovim/neovim where necessary
 
+## Proposed Timeline
+
 Week   Dates          Tasks
 ------ -------------- ------
 1      14-18 May      a
@@ -52,17 +54,35 @@ Week   Dates          Tasks
 
 ## Related Work
 
-VSCodeVim
-VSCodeNeovim
-ActualVim https://github.com/lunixbochs/actualvim
-https://github.com/daa84/neovim-gtk and https://github.com/dzhou121/gonvim use the most UI protocol features.
-https://github.com/neovim/node-client
+The bulk of this proposal will take place in the VSCodeNeovim project.
+This project is a fork of VSCodeVim owned by this proposal's mentor Chillee
+
+---------------------- ----------------------------------------------------------
+Project Name           Description
+---------------------- ----------------------------------------------------------
+Neovim                 Vim fork which provides the `nvim` executable. \
+                       https://github.com/neovim/neovim \
+
+Neovim Node Client     NodeJS bindings for `nvim`. \
+                       https://github.com/neovim/node-client \
+
+VS Code                Graphical text editor. \
+                       https://github.com/Microsoft/vscode \
+
+VSCodeVim              VS Code extension which emulates some Vim functionality. \
+                       https://github.com/VSCodeVim/Vim \
+
+VSCodeNeovim           Fork of VSCodeVim which holds the starting codebase for this proposal. \
+                       https://github.com/Chillee/VSCodeNeovim \
+
+ActualVim              `nvim`-backed extension for Sublime Text. This project provides good implementation ideas. \
+                       https://github.com/lunixbochs/actualvim
+---------------------- ----------------------------------------------------------
 
 ## Biographical Information
 
-Contributor to and user of VSCodeVim extension. I feel the need for a fundamental improvement to VSCodeVim as a dev on the project and a user.
-Extensive experience with web technologies make navigating VS Code and VSCodeVim a breeze.
-Coding in limited-power environments has given me experience suitable to writing responsive UIs and fast data structures.
-Actually using the product daily makes me care about user experience, not just deliverable checkmarks.
-
-When necessary, I am comfortable with debugging or extending https://github.com/neovim/node-client.
+I am a long-time user of the VSCodeVim extension and have also contributed to add functionality to it.
+I feel the need for a fundamental improvement to VSCodeVim and believe that integrating with `nvim` will improve the extension for both contributors and users.
+Having worked professionally with web technologies for several years, I can navigate the VSCodeVim codebase and write maintainable Typescript with ease.
+My work in UI/UX has given me the skills to tune perceived performance and I have the development experience to make efficient and maintainable design decisions.
+Because I use VS Code daily, I care about the user experience beyond deliverable checkmarks - I want Vim-lovers to feel at home in VS Code!
