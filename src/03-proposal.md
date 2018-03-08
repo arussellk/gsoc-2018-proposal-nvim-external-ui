@@ -17,7 +17,16 @@ Combining VS Code and a true Vim experience through `nvim` will create the ultim
 
 ## Deliverables
 
+The beginning work of this proposal will take place in the VSCodeNeovim project.
+(VSCodeNeovim is a fork of VSCodeVim and is owned by this proposal's mentor, Chillee.)
+Once VSCodeNeovim is working sufficiently well, we will merge our `nvim` integration back into VSCodeVim to expand our user base.
+After the `nvim` integration is stable, we will phase out the existing Vim emulation.
+We will wrap up the end of the proposal with time for bug fixes and enhancements.
+Ultimately, we will provide a stable, predictable, and complete Vim editing experience to VS Code users.
+
 Completion of this proposal will yield:
+
+TODO: expand the following list with details from the document from Chillee
 
 1. A working `nvim` integration within VSCodeVim, with as many of the following addressed as possible:
     - Multicursor support
@@ -35,27 +44,49 @@ Completion of this proposal will yield:
 2. Improvements to https://github.com/neovim/node-client where necessary
 3. Improvements to https://github.com/neovim/neovim where necessary
 
-## Proposed Timeline
+TODO: fill in the following table with specific weekly goals
 
+Table: Proposed Timeline
+
+------ -------------- ----------------------------------------------------
 Week   Dates          Tasks
------- -------------- ------
+------ -------------- ----------------------------------------------------
 1      14-18 May      a
+
 2      21-25 May      b
+
 3      28 May - 1 Jun c
+
 4      4-8 Jun        d
+
 5      11-15 Jun      e
+
 6      18-22 Jun      f
+
 7      25-29 Jun      g
+
 8      2-6 Jul        h
+
 9      9-13 Jul       i
+
 10     16-20 Jul      j
+
 11     23-27 Jul      k
+
 12     30 Jul - 3 Aug l
+------ -------------- ----------------------------------------------------
 
 ## Related Work
 
-The bulk of this proposal will take place in the VSCodeNeovim project.
-This project is a fork of VSCodeVim owned by this proposal's mentor Chillee
+The majority of the coding in this proposal will take place in the VSCodeNeovim and VSCodeVim projects.
+VSCodeNeoim already contains a starting point for a VS Code/`nvim` integration.
+
+The ActualVim project is an extension for Sublime Text which accomplishes some of what this proposal sets out to do - we will reference it when appropriate.
+
+Neovim and Neovim Node Client are two projects which our proposal depend on.
+We will debug and contribute to both projects as-necessary to accomplish the goals of this proposal.
+
+Table: Related Projects Summary
 
 ---------------------- ----------------------------------------------------------
 Project Name           Description
