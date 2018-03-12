@@ -1,34 +1,42 @@
 ## Benefits to Community
 
-Visual Studio Code (VS Code) is a popular open source and cross-platform text editor.
-Initially released in 2015, it has since gained over 2.6 million monthly active users.
-VSCodeVim is an extension for VS Code which provides Vim emulation,
-and with over 1.8 million downloads it is one of VS Code's most-installed extensions.
-Because VSCodeVim only emulates Vim functionality, it provides a subset of Vim features.
-The goal for this proposal is to make use of `nvim`'s remote UI protocol from within VSCodeVim which will:
+Visual Studio Code (VS Code) is a popular open source and cross-platform
+text editor. Initially released in 2015, it has since gained over
+2.6 million monthly active users. VSCodeVim is an extension for VS Code
+which provides Vim emulation, and with over 1.8 million downloads
+it is one of VS Code's most-installed extensions. Because VSCodeVim only
+emulates Vim functionality, it provides a subset of Vim features.
+The goal for this proposal is to make use of `nvim`'s remote UI protocol
+from within VSCodeVim which will:
 
 1. Increase the number of Vim commands and features available in VS Code
 2. Decrase the number of emulation bugs affecting users
 3. Improve the VSCodeVim codebase for future contributions
 4. Make VS Code a more welcoming editor for developers who rely on Vim
 
-In my experience, VS Code provides the best editor features for web developers and Vim provides my favorite text editing capabilities.
-Combining VS Code and a true Vim experience through `nvim` will create the ultimate development environment for developers like me.
+In my experience, VS Code provides the best editor features for
+web developers and Vim provides my favorite text editing capabilities.
+Combining VS Code and a true Vim experience through `nvim` will create
+the ultimate development environment for developers like me.
 
 ## Deliverables
 
-The beginning work of this proposal will take place in the VSCodeNeovim project.
-(VSCodeNeovim is a fork of VSCodeVim and is owned by this proposal's mentor, Chillee.)
-Once VSCodeNeovim is working sufficiently well, we will merge our `nvim` integration back into VSCodeVim to expand our user base.
-After the `nvim` integration is stable, we will phase out the existing Vim emulation.
-We will wrap up the end of the proposal with time for bug fixes and enhancements.
-Ultimately, we will provide a stable, predictable, and complete Vim editing experience to VS Code users.
+The beginning work of this proposal will take place in the VSCodeNeovim
+project. (VSCodeNeovim is a fork of VSCodeVim and is owned by this
+proposal's mentor, Chillee.) Once VSCodeNeovim is working sufficiently
+well, we will merge our `nvim` integration back into VSCodeVim to
+expand our user base. After the `nvim` integration is stable, we will
+phase out the existing Vim emulation. We will wrap up the end of the
+proposal with time for bug fixes and enhancements. Ultimately, we will
+provide a stable, predictable, and complete Vim editing experience to
+VS Code users.
 
 Completion of this proposal will yield:
 
 TODO: expand the following list with details from the document from Chillee
 
-1. A working `nvim` integration within VSCodeVim, with as many of the following addressed as possible:
+1. A working `nvim` integration within VSCodeVim, with as many of the
+following addressed as possible:
     - Multicursor support
     - Proper operator handling
     - Sequential actions
@@ -78,13 +86,17 @@ Week   Dates          Tasks
 
 ## Related Work
 
-The majority of the coding in this proposal will take place in the VSCodeNeovim and VSCodeVim projects.
-VSCodeNeoim already contains a starting point for a VS Code/`nvim` integration.
+The majority of the coding in this proposal will take place in the
+VSCodeNeovim and VSCodeVim projects. VSCodeNeoim already contains a
+starting point for a VS Code/`nvim` integration.
 
-The ActualVim project is an extension for Sublime Text which accomplishes some of what this proposal sets out to do - we will reference it when appropriate.
+The ActualVim project is an extension for Sublime Text which
+accomplishes some of what this proposal sets out to do. We will
+reference it when appropriate.
 
-Neovim and Neovim Node Client are two projects which our proposal depend on.
-We will debug and contribute to both projects as-necessary to accomplish the goals of this proposal.
+Neovim and Neovim Node Client are two projects which our proposal
+depend on. We will debug and contribute to both projects as-necessary
+to accomplish the goals of this proposal.
 
 Table: Related Projects Summary
 
@@ -112,8 +124,14 @@ ActualVim              `nvim`-backed extension for Sublime Text. This project pr
 
 ## Biographical Information
 
-I am a long-time user of the VSCodeVim extension and have also contributed to add functionality to it.
-I feel the need for a fundamental improvement to VSCodeVim and believe that integrating with `nvim` will improve the extension for both contributors and users.
-Having worked professionally with web technologies for several years, I can navigate the VSCodeVim codebase and write maintainable Typescript with ease.
-My work in UI/UX has given me the skills to tune perceived performance and I have the development experience to make efficient and maintainable design decisions.
-Because I use VS Code daily, I care about the user experience beyond deliverable checkmarks - I want Vim-lovers to feel at home in VS Code!
+I am a long-time user of the VSCodeVim extension and have also
+contributed to add functionality to it. I feel the need for a
+fundamental improvement to VSCodeVim and believe that integrating with
+`nvim` will improve the extension for both contributors and users.
+Having worked professionally with web technologies for several years,
+I can navigate the VSCodeVim codebase and write maintainable Typescript
+with ease. My work in UI/UX has given me the skills to tune perceived
+performance and I have the development experience to make efficient and
+maintainable design decisions. Because I use VS Code daily, I care about
+the user experience beyond deliverable checkmarks - I want Vim-lovers
+to feel at home in VS Code!
