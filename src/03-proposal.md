@@ -108,7 +108,7 @@ Week   Dates          Tasks
                       2. Release `nvim` integration as opt-in beta \
 
 6      18-22 Jun      1. Fix bugs reported by beta \
-                      2. Improve performance with diffs from `nvim`
+                      2. Improve performance with diffs from `nvim` \
 
 7      25-29 Jun      1. Fix bugs reported by beta \
                       2. Add key remapping \
