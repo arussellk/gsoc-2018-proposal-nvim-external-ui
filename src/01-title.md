@@ -13,5 +13,6 @@ to use `nvim` will expose more of Vim's functionality to users and
 allow future development on VSCodeVim to focus on tuning performance
 and improving user experience. Using `nvim` will also give VSCodeVim
 support for existing `.vimrc` files and many native Vim plugins.
-In short, using `nvim` in VS Code will combine the power of Vim and the
-convenience of VS Code to make the everyday lives of developers better.
+In short, using `nvim` in VSCodeVim will combine the power of Vim
+and the convenience of VS Code to improve the everyday lives of
+developers.
