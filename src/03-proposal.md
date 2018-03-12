@@ -35,7 +35,8 @@ Completion of this proposal will yield:
 
 TODO: Divide the following list into "Required" and "Optional" tasks.
 Put "Required" tasks at the beginning of the timeline and "Optional"
-tasks later in the timeline.
+tasks later in the timeline. (@Chillee I think you should be involved
+in deciding "Required" versus "Optional".)
 
 1. A working `nvim` integration within VSCodeVim, with as many of the
 following addressed as possible:
@@ -68,7 +69,7 @@ following addressed as possible:
         - Related: https://github.com/neovim/neovim/pull/7917
     - Key Remapping
         - (@Chillee: I don't understand this task from the
-          PDF you sent me in Slack.)
+          PDF you sent me in Slack. Please advise.)
     - Handle read-only files
         - Research best solution
     - Search highlighting
