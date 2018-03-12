@@ -157,7 +157,7 @@ improvement to VSCodeVim and believe that integrating with `nvim` will
 improve the extension for both contributors and users.
 Having worked professionally with web technologies for several years,
 I can navigate the VSCodeVim codebase and write maintainable Typescript
-with ease. My work in UI/UX has given me the skills to tune
+with ease. My work in UI/UX has given me skills to tune
 performance and I have the development experience to make efficient and
 maintainable design decisions. As a daily VS Code user, I care about
 the outcome of this proposal beyond deliverable checkmarks - I want

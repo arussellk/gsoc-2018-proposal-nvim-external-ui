@@ -1,6 +1,6 @@
 # GSoC 2018 Neovim Proposal
 
-Use `nvim` to bring Vim functionality to Visual Studio Code
+Improve Vim functionality in Visual Studio Code with `nvim`
 
 ## Summary
 
