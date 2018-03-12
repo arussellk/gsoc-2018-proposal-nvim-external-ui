@@ -62,7 +62,7 @@ following addressed as possible:
     - Filter commands that VSCodeVim should handle and do not send them
       to `nvim`
     - Handle file opening and other events
-        - Use autocommands to sync VSCode and `nvim` state
+        - Use autocommands to sync VS Code and `nvim` state
     - Performance
         - To improve performance we need diffs from `nvim`
         - Related: https://github.com/neovim/neovim/pull/5269
@@ -81,34 +81,54 @@ following addressed as possible:
 2. Improvements to https://github.com/neovim/node-client where necessary
 3. Improvements to https://github.com/neovim/neovim where necessary
 
+\pagebreak
 Table: Proposed Timeline
 
 ------ -------------- ----------------------------------------------------
 Week   Dates          Tasks
 ------ -------------- ----------------------------------------------------
-1      14-18 May      1. Gain familiarity with existing codebase. \
+1      14-18 May      1. Gain familiarity with existing codebase \
+                      2. Make VSCodeNeovim documentation beginner-friendly
+                         to invite contributions from anyone \
+                      3. Fix automated build scripts \
+                      4. Make automated tests for existing codebase \
 
-2      21-25 May      b
+2      21-25 May      1. Handle operators without storing state in
+                         VSCodeVim \
+                      2. Handle splits and folds \
 
-3      28 May - 1 Jun c
+3      28 May - 1 Jun 1. Add cross-file support \
+                      2. Synchronize file opening and other events
+                         between VS Code and `nvim` \
 
-4      4-8 Jun        d
+4      4-8 Jun        1. Add autocomplete/snippet support \
+                      2. Add settings support \
 
-5      11-15 Jun      e
+5      11-15 Jun      1. Add ability to filter VSCodeVim-only keystrokes \
+                      2. Release `nvim` integration as opt-in beta \
 
-6      18-22 Jun      f
+6      18-22 Jun      1. Fix bugs reported by beta \
+                      2. Improve performance with diffs from `nvim`
 
-7      25-29 Jun      g
+7      25-29 Jun      1. Fix bugs reported by beta \
+                      2. Add key remapping \
 
-8      2-6 Jul        h
+8      2-6 Jul        1. Fix bugs reported by beta \
+                      2. Handle read-only files \
 
-9      9-13 Jul       i
+9      9-13 Jul       1. Release `nvim` integration as default in VSCodeVim \
+                      2. Fix bugs reported by general release \
 
-10     16-20 Jul      j
+10     16-20 Jul      1. Fix bugs reported by general release \
+                      2. Improve search highlighting \
 
-11     23-27 Jul      k
+11     23-27 Jul      1. Fix bugs reported by general release \
+                      2. Add multicursor support \
 
-12     30 Jul - 3 Aug l
+12     30 Jul - 3 Aug 1. Fix bugs reported by general release \
+                      2. Finish outstanding tasks \
+                      3. Ensure accurate documentation \
+                      4. Build roadmap for future development \
 ------ -------------- ----------------------------------------------------
 
 ## Related Work
