@@ -33,33 +33,59 @@ VS Code users.
 
 Completion of this proposal will yield:
 
-TODO: expand the following list with details from the document from Chillee
+TODO: Divide the following list into "Required" and "Optional" tasks.
+Put "Required" tasks at the beginning of the timeline and "Optional"
+tasks later in the timeline.
 
 1. A working `nvim` integration within VSCodeVim, with as many of the
 following addressed as possible:
-    - Multicursor support
-    - Proper operator handling
-    - Sequential actions
+    - Handle operators without storing state in VSCodeVim
+        - For example: `2dd` should cause two lines to be deleted without
+          any special logic in VSCodeVim
+        - Related: https://github.com/neovim/neovim/issues/6166
     - Cross-file support
-    - Proper split and fold handling
+        - Actions such as `gd` should keep `nvim` and VSCodeVim in sync
+    - Handle split and fold
+        - `:sp` and similar commands should work as-expected
+        - Fold commands should work as-expected
+        - Override `j`, `k`, `gj`, `gk` and related commands
     - Settings
-    - Snippets
-    - Autocomplete
-    - Read-only file handling
-    - Search highlighting
+        - Support `.vimrc` files
+        - Determine whether VSCodeVim or `nvim` should be the source of
+          truth for settings
+    - Autocomplete/Snippets
+        - Research best solution
+        - Handle any auto-expanded text as if the user typed it
+        - Related: https://github.com/lunixbochs/ActualVim/issues/97
+    - Automated testing framework
+    - Filter commands that VSCodeVim should handle and do not send them
+      to `nvim`
+    - Handle file opening and other events
+        - Use autocommands to sync VSCode and `nvim` state
+    - Performance
+        - To improve performance we need diffs from `nvim`
+        - Related: https://github.com/neovim/neovim/pull/5269
+        - Related: https://github.com/neovim/neovim/pull/7917
     - Key Remapping
-    - Testing framework
+        - (@Chillee: I don't understand this task from the
+          PDF you sent me in Slack.)
+    - Handle read-only files
+        - Research best solution
+    - Search highlighting
+        - Research best solution
+    - Multicursor support
+        - Once implemented we will need to ensure that actions are
+          sequential
+        - Related: https://github.com/neovim/neovim/issues/211
 2. Improvements to https://github.com/neovim/node-client where necessary
 3. Improvements to https://github.com/neovim/neovim where necessary
-
-TODO: fill in the following table with specific weekly goals
 
 Table: Proposed Timeline
 
 ------ -------------- ----------------------------------------------------
 Week   Dates          Tasks
 ------ -------------- ----------------------------------------------------
-1      14-18 May      a
+1      14-18 May      1. Gain familiarity with existing codebase. \
 
 2      21-25 May      b
 
@@ -118,7 +144,7 @@ VSCodeVim              VS Code extension which emulates some Vim functionality. 
 VSCodeNeovim           Fork of VSCodeVim which holds the starting codebase for this proposal. \
                        https://github.com/Chillee/VSCodeNeovim \
 
-ActualVim              `nvim`-backed extension for Sublime Text. This project provides good implementation ideas. \
+ActualVim              `nvim`-backed Vim extension for Sublime Text. This project provides good implementation ideas. \
                        https://github.com/lunixbochs/actualvim
 ---------------------- ----------------------------------------------------------
 
