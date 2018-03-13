@@ -2,6 +2,8 @@
 
 A formatted proposal is in `proposal.safe.pdf`.
 You can read, comment, and make PRs on the markdown in `src/`.
+The raw view is best because Github Flavored Markdown renders tables
+differently than `pandoc`.
 
 To create PDFs (uses `pandoc`):
 ```
