@@ -116,7 +116,8 @@ Week   Dates          Tasks
 8      2-6 Jul        1. Fix bugs reported by beta \
                       2. Handle read-only files \
 
-9      9-13 Jul       1. Release `nvim` integration as default in VSCodeVim \
+9      9-13 Jul       1. Release `nvim` integration as default in
+                         VSCodeVim \
                       2. Fix bugs reported by general release \
 
 10     16-20 Jul      1. Fix bugs reported by general release \
@@ -147,9 +148,9 @@ to accomplish the goals of this proposal.
 
 Table: Related Projects Summary
 
----------------------- ----------------------------------------------------------
+---------------------- ---------------------------------------------------
 Project Name           Description
----------------------- ----------------------------------------------------------
+---------------------- ---------------------------------------------------
 Neovim                 Vim fork which provides the `nvim` executable. \
                        https://github.com/neovim/neovim \
 
@@ -159,15 +160,18 @@ Neovim Node Client     NodeJS bindings for `nvim`. \
 VS Code                Graphical text editor. \
                        https://github.com/Microsoft/vscode \
 
-VSCodeVim              VS Code extension which emulates some Vim functionality. \
+VSCodeVim              VS Code extension which emulates some Vim
+                       functionality. \
                        https://github.com/VSCodeVim/Vim \
 
-VSCodeNeovim           Fork of VSCodeVim which holds the starting codebase for this proposal. \
+VSCodeNeovim           Fork of VSCodeVim which holds the starting codebase
+                       for this proposal. \
                        https://github.com/Chillee/VSCodeNeovim \
 
-ActualVim              `nvim`-backed Vim extension for Sublime Text. This project provides good implementation ideas. \
+ActualVim              `nvim`-backed Vim extension for Sublime Text.
+                       This project provides good implementation ideas. \
                        https://github.com/lunixbochs/actualvim
----------------------- ----------------------------------------------------------
+---------------------- ---------------------------------------------------
 
 ## Biographical Information
 
