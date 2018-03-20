@@ -135,7 +135,7 @@ Week   Dates          Tasks
 ## Related Work
 
 The majority of the coding in this proposal will take place in the
-VSCodeNeovim and VSCodeVim projects. VSCodeNeoim already contains a
+VSCodeNeovim and VSCodeVim projects. VSCodeNeovim already contains a
 starting point for a VS Code/`nvim` integration.
 
 The ActualVim project is an extension for Sublime Text which
