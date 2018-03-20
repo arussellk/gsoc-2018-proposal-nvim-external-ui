@@ -68,8 +68,10 @@ following addressed as possible:
         - Related: https://github.com/neovim/neovim/pull/5269
         - Related: https://github.com/neovim/neovim/pull/7917
     - Key Remapping
-        - (@Chillee: I don't understand this task from the
-          PDF you sent me in Slack. Please advise.)
+        - Research and decide whether something like `ctrl-f` should be
+          handled by VS Code or by `nvim`
+        - Research and decide how to best expose settings for key
+          remapping
     - Handle read-only files
         - Research best solution
     - Search highlighting
