@@ -74,10 +74,6 @@ following addressed as possible:
         - Research best solution
     - Search highlighting
         - Research best solution
-    - Multicursor support
-        - Once implemented we will need to ensure that actions are
-          sequential
-        - Related: https://github.com/neovim/neovim/issues/211
 2. Improvements to https://github.com/neovim/node-client where necessary
 3. Improvements to https://github.com/neovim/neovim where necessary
 
@@ -124,7 +120,6 @@ Week   Dates          Tasks
                       2. Improve search highlighting \
 
 11     23-27 Jul      1. Fix bugs reported by general release \
-                      2. Add multicursor support \
 
 12     30 Jul - 3 Aug 1. Fix bugs reported by general release \
                       2. Finish outstanding tasks \
