@@ -10,7 +10,7 @@ this proposal is to use `nvim`'s remote UI protocol from within
 VSCodeVim which will:
 
 1. Increase the number of Vim commands and features available in VS Code
-2. Decrase the number of emulation bugs affecting users
+2. Decrease the number of emulation bugs affecting users
 3. Improve the VSCodeVim codebase for future contributions
 4. Make VS Code a more welcoming editor for developers who rely on Vim
 
@@ -25,59 +25,57 @@ The beginning work of this proposal will take place in the VSCodeNeovim
 project. (VSCodeNeovim is a fork of VSCodeVim and is owned by this
 proposal's mentor, Chillee.) Once VSCodeNeovim is working sufficiently
 well, we will merge our `nvim` integration back into VSCodeVim to
-expand our user base. After the `nvim` integration is stable, we will
-phase out the existing Vim emulation. We will wrap up the end of the
-proposal with time for bug fixes and enhancements. Ultimately, we will
-provide a stable, predictable, and complete Vim editing experience to
-VS Code users.
+expand our user base. We will wrap up the end of the proposal with time
+for bug fixes and enhancements. Ultimately, we will provide a stable,
+predictable, and complete Vim editing experience to VS Code users.
 
-Completion of this proposal will yield:
+Completion of this proposal will yield a working `nvim` integration
+within VSCodeVim with the following:
 
-TODO: Divide the following list into "Required" and "Optional" tasks.
-Put "Required" tasks at the beginning of the timeline and "Optional"
-tasks later in the timeline. (@Chillee I think you should be involved
-in deciding "Required" versus "Optional".)
+- *(Required)* Handle operators without storing state in VSCodeVim
+    - For example: `2dd` should cause two lines to be deleted without
+        any special logic in VSCodeVim
+    - Related: https://github.com/neovim/neovim/issues/6166
+- *(Required)* Cross-file support
+    - Actions such as `gd` should keep `nvim` and VSCodeVim in sync
+    - Handle file opening and other related events
+    - Use autocommands to sync VS Code and `nvim` state
+- *(Required)* Autocomplete/Snippets/Suggestions
+    - Research best solution
+    - Handle any auto-expanded text as if the user typed it
+    - Related: https://github.com/lunixbochs/ActualVim/issues/97
+- *(Required)* Settings
+    - Support `.vimrc` files
+    - Determine whether VSCodeVim or `nvim` should be the source of
+        truth for settings
+- *(Required)* Automated testing framework
+- *(Required)* Filter commands that VSCodeVim should handle and do not
+    send them to `nvim`
+- *(Required)* Key Remapping
+    - Research and decide whether something like `ctrl-f` should be
+        handled by VS Code or by `nvim`
+    - Research and decide how to best expose settings for key
+        remapping
+- *(Ongoing)* Performance
+    - To improve performance, we need diffs from `nvim`
+    - Related: https://github.com/neovim/neovim/pull/5269
+    - Related: https://github.com/neovim/neovim/pull/7917
+- *(Ongoing)* Consider non-English languages and locales
+    - Ensure that Input Method Editors (IMEs) work, thereby supporting
+        Pinyin-style editing
+    - Related: https://github.com/Microsoft/vscode/issues/8133
+- *(Optional)* Handle split and fold
+    - `:sp` and similar commands should work as-expected
+    - Fold commands should work as-expected
+    - Override `j`, `k`, `gj`, `gk` and related commands
+- *(Optional)* Handle read-only files
+    - Research best solution
+- *(Optional)* Improve search highlighting
+    - Research best solution
 
-1. A working `nvim` integration within VSCodeVim, with as many of the
-following addressed as possible:
-    - Handle operators without storing state in VSCodeVim
-        - For example: `2dd` should cause two lines to be deleted without
-          any special logic in VSCodeVim
-        - Related: https://github.com/neovim/neovim/issues/6166
-    - Cross-file support
-        - Actions such as `gd` should keep `nvim` and VSCodeVim in sync
-    - Handle split and fold
-        - `:sp` and similar commands should work as-expected
-        - Fold commands should work as-expected
-        - Override `j`, `k`, `gj`, `gk` and related commands
-    - Settings
-        - Support `.vimrc` files
-        - Determine whether VSCodeVim or `nvim` should be the source of
-          truth for settings
-    - Autocomplete/Snippets
-        - Research best solution
-        - Handle any auto-expanded text as if the user typed it
-        - Related: https://github.com/lunixbochs/ActualVim/issues/97
-    - Automated testing framework
-    - Filter commands that VSCodeVim should handle and do not send them
-      to `nvim`
-    - Handle file opening and other events
-        - Use autocommands to sync VS Code and `nvim` state
-    - Performance
-        - To improve performance we need diffs from `nvim`
-        - Related: https://github.com/neovim/neovim/pull/5269
-        - Related: https://github.com/neovim/neovim/pull/7917
-    - Key Remapping
-        - Research and decide whether something like `ctrl-f` should be
-          handled by VS Code or by `nvim`
-        - Research and decide how to best expose settings for key
-          remapping
-    - Handle read-only files
-        - Research best solution
-    - Search highlighting
-        - Research best solution
-2. Improvements to https://github.com/neovim/node-client where necessary
-3. Improvements to https://github.com/neovim/neovim where necessary
+The work of this proposal will also make improvements to
+https://github.com/neovim/node-client and
+https://github.com/neovim/neovim where necessary.
 
 \pagebreak
 Table: Proposed Timeline
@@ -93,13 +91,12 @@ Week   Dates          Tasks
 
 2      21-25 May      1. Handle operators without storing state in
                          VSCodeVim \
-                      2. Handle splits and folds \
-
-3      28 May - 1 Jun 1. Add cross-file support \
                       2. Synchronize file opening and other events
                          between VS Code and `nvim` \
 
-4      4-8 Jun        1. Add autocomplete/snippet support \
+3      28 May - 1 Jun 1. Add autocomplete/snippet/suggestion support \
+
+4      4-8 Jun        1. Continue autocomplete/snippet/suggestion support \
                       2. Add settings support \
 
 5      11-15 Jun      1. Add ability to filter VSCodeVim-only keystrokes \
@@ -114,16 +111,15 @@ Week   Dates          Tasks
 8      2-6 Jul        1. Fix bugs reported by beta \
                       2. Handle read-only files \
 
-9      9-13 Jul       1. Release `nvim` integration as default in
-                         VSCodeVim \
-                      2. Fix bugs reported by general release \
+9      9-13 Jul       1. Fix bugs reported by beta \
+                      2. Handle splits and folds \
 
-10     16-20 Jul      1. Fix bugs reported by general release \
+10     16-20 Jul      1. Fix bugs reported by beta \
                       2. Improve search highlighting \
 
-11     23-27 Jul      1. Fix bugs reported by general release \
+11     23-27 Jul      1. Fix bugs reported by beta \
 
-12     30 Jul - 3 Aug 1. Fix bugs reported by general release \
+12     30 Jul - 3 Aug 1. Fix bugs reported by beta \
                       2. Finish outstanding tasks \
                       3. Ensure accurate documentation \
                       4. Build roadmap for future development \
@@ -140,7 +136,7 @@ accomplishes some of what this proposal sets out to do. We will
 reference it when appropriate.
 
 Neovim and Neovim Node Client are two projects which our proposal
-depend on. We will debug and contribute to both projects as-necessary
+depends on. We will debug and contribute to both projects as-necessary
 to accomplish the goals of this proposal.
 
 Table: Related Projects Summary
